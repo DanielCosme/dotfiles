@@ -32,22 +32,11 @@ set -gx DOCKER_BUILDKIT 1
 set -gx CARGO_BIN $HOME/.cargo/bin
 set -gx PATH $PATH $CARGO_BIN
 
-# Ruby
-if command -q gem
-    set -gx GEM_HOME $(gem env gemhome)
-    set -gx PATH $PATH "$GEM_HOME/bin"
-end
-
 # node/npm
 set -gx NPM_PACKAGES "$HOME/.npm_packages"
 set -gx PATH $PATH $NPM_PACKAGES/bin
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
-if test -d $NPM_PACKAGES/share/man
-    if not contains -- $NPM_PACKAGES/share/man $MANPATH
-        set -gx MANPATH $NPM_PACKAGES/share/man $MANPATH
-    end
-end
 if test ! -d "$HOME/.npm_packages"
     mkdir "$HOME/.npm_packages"
 end
@@ -73,9 +62,6 @@ abbr -a gds git diff --staged
 abbr -a gfc git findcommit
 abbr -a gfm git findmessage
 abbr -a gst git stash
-
-abbr -a ch chezmoi
-abbr -a reload exec fish
 
 # Replace ls with exa
 alias ls='exa --color=always --group-directories-first --icons' # preferred listing
