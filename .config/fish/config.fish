@@ -64,6 +64,10 @@ abbr -a gfc git findcommit
 abbr -a gfm git findmessage
 abbr -a gst git stash
 
+# Kubernetes
+abbr -a kk kubectl
+abbr -a kks sudo kubectl
+
 # Replace ls with exa
 alias ls='exa --color=always --group-directories-first --icons' # preferred listing
 alias la='exa -a --color=always --group-directories-first --icons'  # all files and dirs
