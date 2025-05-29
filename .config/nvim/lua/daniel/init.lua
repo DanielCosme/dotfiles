@@ -1,5 +1,0 @@
-require('daniel.set')
-require('daniel.remap')
-require('daniel.lazy')
-require('daniel.auto')
-require('daniel.gui')
