@@ -1,6 +1,5 @@
 #!/usr/bin/env fish
 
-
 if test $SHELL != "/usr/bin/fish"
 	echo Making Fish Shell Default
 	chsh -s (which fish)
@@ -25,8 +24,4 @@ if not command -q Hyprland
 	sudo pacman -S --noconfirm hyprland xdg-desktop-portal-hyprland mako waybar wofi wl-clipboard
 else
 	echo "hyprland installed"
-end
-
-if note command -q zen-browser
-	yay -S brave-bin zen-browser-bin
 end

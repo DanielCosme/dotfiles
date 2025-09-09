@@ -11,10 +11,10 @@ return {
       require('bamboo').load()
     end,
   },
-  {
-    'craftzdog/solarized-osaka.nvim',
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  },
+  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000, lazy = false },
+  { 'rebelot/kanagawa.nvim', priority = 1000, lazy = false },
+  { 'shaunsingh/nord.nvim', priority = 1000, lazy = false },
+  { 'craftzdog/solarized-osaka.nvim', lazy = false, priority = 1000, opts = {} },
+  { 'tiagovla/tokyodark.nvim', lazy = false, priority = 1000, opts = {} },
+  { 'thesimonho/kanagawa-paper.nvim', lazy = false, priority = 1000, opts = {} },
 }
