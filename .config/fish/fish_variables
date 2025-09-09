@@ -1,5 +1,13 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export CARGO_BIN:/home/daniel/\x2ecargo/bin
+SETUVAR --export DOCKER_BUILDKIT:1
+SETUVAR --export GO111MODULE:on
+SETUVAR --export GOBIN:/home/daniel/go/bin
+SETUVAR --export --path GOPATH:/home/daniel/go
+SETUVAR --export NPM_PACKAGES:/home/daniel/\x2enpm_packages
+SETUVAR --export XDG_CONFIG_HOME:/home/daniel/\x2econfig
+SETUVAR --export XDG_USER_CONFIG_DIR:/home/daniel/\x2econfig
 SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:808080
 SETUVAR fish_color_cancel:\x2dr
@@ -29,3 +37,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
+SETUVAR fish_user_paths:/home/daniel/\x2enpm_packages

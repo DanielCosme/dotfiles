@@ -2,94 +2,41 @@
 # - install --
 # curl -fsSL https://starship.rs/install.sh | bash
 # - load -
-starship init fish | source
+# starship init fish | source
 
 fish_vi_key_bindings
 fish_user_key_bindings
+fish_add_path /.local/bin
 
 set fish_greeting
+# TO Evaluate
+# set -gx GODOCC_STYLE dracula
 
 # environment
-set -gx EDITOR nvim
-set -gx BROWSER firefox
-set -gx TERMINAL alacritty
 set -gx XDG_CONFIG_HOME $HOME/.config
 set -gx XDG_USER_CONFIG_DIR $XDG_CONFIG_HOME
-# set -gx XDG_DATA_HOME $HOME/.local
-set -gx PAGER bat
-set -gx MANPAGER 'nvim -U NONE +Man!'
-set -gx SSH_TTY dummy # to show hostname on remote machines
+
+# Docker
+set -gx DOCKER_BUILDKIT 1
 
 # Golang
 set -gx GOPATH $HOME/go
 set -gx GOBIN $HOME/go/bin
-set -gx PATH $PATH $GOBIN
-set -gx PATH $PATH /usr/local/go/bin
-set -gx GODOCC_STYLE dracula
 set -gx GO111MODULE on
-set -gx DOCKER_BUILDKIT 1
+fish_add_path $GOBIN
+fish_add_path /usr/local/go/bin
 
 # Rust
 set -gx CARGO_BIN $HOME/.cargo/bin
-set -gx PATH $PATH $CARGO_BIN
+fish_add_path $CARGO_BIN
 
-# node/npm
+# Node
 set -gx NPM_PACKAGES "$HOME/.npm_packages"
-set -gx PATH $PATH $NPM_PACKAGES/bin
+fish_add_path $NPM_PACKAGES
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
-set -gx PATH "$PNPM_HOME" $PATH
+fish_add_path $PNPM_HOME
 if test ! -d "$HOME/.npm_packages"
     mkdir "$HOME/.npm_packages"
-end
-
-# Neovim
-alias vi='nvim'
-abbr -a nv neovide
-
-# Git
-alias glog='git log --all --graph --decorate --oneline'
-alias gb='git branch -vv'
-abbr -a gs git status
-abbr -a ga git add
-abbr -a gc  git commit
-abbr -a gcm git commit -m
-abbr -a gf  git fetch
-abbr -a gcl git clone
-abbr -a gco git checkout
-abbr -a gp  git push
-abbr -a gpl git pull
-abbr -a gd  git diff
-abbr -a gds git diff --staged
-abbr -a gfc git findcommit
-abbr -a gfm git findmessage
-abbr -a gst git stash
-
-# Kubernetes
-abbr -a kk kubectl
-abbr -a kks sudo kubectl
-
-# Replace ls with exa
-alias ls='exa --color=always --group-directories-first --icons' # preferred listing
-alias la='exa -a --color=always --group-directories-first --icons'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first --icons'  # long format
-alias lla='exa -la --color=always --group-directories-first --icons'  # long format
-abbr -a lt exa -T --color=always --group-directories-first --icons --level $argv # tree listing
-alias l.="exa -a | grep -E '^\.'"                                     # show only dotfiles
-
-alias bat='bat'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-alias fixpacman="sudo rm /var/lib/pacman/db.lck"
-# Cleanup orphaned packages
-alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
-# Get the error messages from journalctl
-alias jctl="journalctl -p 3 -xb"
-
-# Fish command history
-function history
-    builtin history --show-time='%F %T '
 end
 
 # Add ~/.local/bin to PATH
@@ -97,6 +44,24 @@ if test -d ~/.local/bin
     if not contains -- ~/.local/bin $PATH
         set -p PATH ~/.local/bin
     end
+end
+
+# Kubernetes
+abbr -a kk kubectl
+abbr -a kks sudo kubectl
+
+function pacman_fix
+    sudo rm /var/lib/pacman/db.lck
+end
+
+# Cleanup orphaned packages
+function pacman_cleanup
+    sudo pacman -Rns (pacman -Qtdq)
+end
+
+# Fish command history
+function history
+    builtin history --show-time='%F %T '
 end
 
 # Fish syntax highlighting
@@ -125,8 +90,3 @@ set -U fish_pager_color_prefix white --bold --underline
 set -U fish_pager_color_progress brwhite --background=cyan
 set -U fish_color_match --background=brblue
 set -U fish_color_comment 990000
-
-## Starship prompt
-# if status --is-interactive
-#    source ("/usr/bin/starship" init fish --print-full-init | psub)
-# end

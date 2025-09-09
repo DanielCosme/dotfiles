@@ -1,0 +1,15 @@
+wget
+curl
+git
+stow
+vim
+btop
+fish
+tmux
+man-db
+man-pages
+base-devel
+ghostty
+fontconfig
+ttf-cascadia-mono-nerd
+pavucontrol
