@@ -1,3 +1,4 @@
 font-family = monospace
 font-size = 14
 copy-on-select = clipboard
+mouse-hide-while-typing = true

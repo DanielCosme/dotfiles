@@ -59,7 +59,6 @@ sudo pacman -S --noconfirm --needed \
     starship \
     swaybg \
     swayosd \
-    tldr \
     tree-sitter-cli \
     ttf-cascadia-mono-nerd \
     ttf-jetbrains-mono-nerd \
@@ -68,14 +67,17 @@ sudo pacman -S --noconfirm --needed \
     uwsm \
     woff2-font-awesome \
     xdg-desktop-portal-gtk \
-    gnome-keyring
+    gnome-keyring \
+    foot \
+    foot-terminfo
 
 yay -S --noconfirm --needed \
     1password-beta \
     1password-cli \
     brave-bin \
     zen-browser-bin \
-    spotify
+    spotify \
+    tlrc-bin
 
 # To consider
 #   avahi
