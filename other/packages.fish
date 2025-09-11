@@ -17,7 +17,6 @@ sudo pacman -S --noconfirm --needed \
     fzf \
     gcc14 \
     github-cli \
-    seahorse \
     hypridle \
     hyprland \
     hyprland-qtutils \
@@ -33,7 +32,6 @@ sudo pacman -S --noconfirm --needed \
     wofi \
     wl-clipboard \
     wl-clip-persist \
-    wl-screenrec \
     imagemagick \
     impala \
     imv \
@@ -58,9 +56,9 @@ sudo pacman -S --noconfirm --needed \
     playerctl \
     qt5-wayland \
     ripgrep \
-    satty \
     starship \
     swaybg \
+    swayosd \
     tldr \
     tree-sitter-cli \
     ttf-cascadia-mono-nerd \
@@ -68,9 +66,9 @@ sudo pacman -S --noconfirm --needed \
     unzip \
     # Wayland session manager
     uwsm \
-    whois \
     woff2-font-awesome \
-    xdg-desktop-portal-gtk
+    xdg-desktop-portal-gtk \
+    gnome-keyring
 
 yay -S --noconfirm --needed \
     1password-beta \

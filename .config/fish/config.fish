@@ -15,6 +15,8 @@ set fish_greeting
 # environment
 set -gx XDG_CONFIG_HOME $HOME/.config
 set -gx XDG_USER_CONFIG_DIR $XDG_CONFIG_HOME
+set -gx BROWSER brave
+set -gx EDITOR nvim
 
 # Docker
 set -gx DOCKER_BUILDKIT 1
