@@ -1,6 +1,30 @@
 #!/usr/bin/env fish
 
 sudo pacman -S --noconfirm --needed \
+    wget \
+    curl \
+    git \
+    stow \
+    vim \
+    btop \
+    fish \
+    tmux \
+    man \
+    man-db \
+    man-pages \
+    nvim \
+    ripgrep \
+    luarocks \
+    fd \
+    fzf \
+    tree-sitter-cli \
+    tree-sitter \
+    npm \
+    base-devel \
+    ghostty \
+    fontconfig \
+    ttf-cascadia-mono-nerd \
+    pavucontrol \
     bat \
     blueberry \
     clang \
@@ -47,7 +71,6 @@ sudo pacman -S --noconfirm --needed \
     llvm \
     luarocks \
     mako \
-    man \
     noto-fonts \
     noto-fonts-cjk \
     noto-fonts-emoji \
@@ -63,14 +86,23 @@ sudo pacman -S --noconfirm --needed \
     ttf-cascadia-mono-nerd \
     ttf-jetbrains-mono-nerd \
     unzip \
-    # Wayland session manager
-    uwsm \
     woff2-font-awesome \
     xdg-desktop-portal-gtk \
     gnome-keyring \
     foot \
     foot-terminfo \
-    syncthing
+    syncthing \
+    ly # Terminal based login screen thing.
+
+if not command -q yay
+    echo Seting up AUR
+    mkdir $HOME/tmp
+    cd $HOME/tmp
+    git clone https://aur.archlinux.org/yay-bin.git
+    cd yay-bin
+    makepkg -si
+    rm -fr $HOME/tmp
+end
 
 yay -S --noconfirm --needed \
     1password-beta \

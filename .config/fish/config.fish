@@ -1,16 +1,8 @@
-# --- Sstarship (promtp) ---
-# - install --
-# curl -fsSL https://starship.rs/install.sh | bash
-# - load -
-# starship init fish | source
-
 fish_vi_key_bindings
 fish_user_key_bindings
 fish_add_path ~/.local/share/dabs/bin
 
 set fish_greeting
-# TO Evaluate
-# set -gx GODOCC_STYLE dracula
 
 # environment
 set -gx XDG_CONFIG_HOME $HOME/.config

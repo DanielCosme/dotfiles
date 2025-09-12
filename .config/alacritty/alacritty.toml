@@ -5,7 +5,7 @@
 
 [colors]
 [colors.primary]
-background = '#111c18'
+background = '#111C18'
 foreground = '#C1C497'
 
 [colors.normal]
