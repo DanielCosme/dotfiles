@@ -69,7 +69,8 @@ sudo pacman -S --noconfirm --needed \
     xdg-desktop-portal-gtk \
     gnome-keyring \
     foot \
-    foot-terminfo
+    foot-terminfo \
+    syncthing
 
 yay -S --noconfirm --needed \
     1password-beta \
@@ -77,7 +78,8 @@ yay -S --noconfirm --needed \
     brave-bin \
     zen-browser-bin \
     spotify \
-    tlrc-bin
+    tlrc-bin \
+    logseq-desktop-bin
 
 # To consider
 #   avahi

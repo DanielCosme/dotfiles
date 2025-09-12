@@ -6,7 +6,7 @@
 
 fish_vi_key_bindings
 fish_user_key_bindings
-fish_add_path /.local/bin
+fish_add_path ~/.local/share/dabs/bin
 
 set fish_greeting
 # TO Evaluate

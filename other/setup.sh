@@ -25,3 +25,5 @@ if not command -q Hyprland
 else
 	echo "hyprland installed"
 end
+ 
+systemctl --user enable --now syncthing
