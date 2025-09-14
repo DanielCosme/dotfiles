@@ -1,0 +1,56 @@
+add_newline = false
+command_timeout = 200
+scan_timeout = 10
+format = '''
+ [$directory]($style) [$git_branch$git_status]($style)
+[$character]($style)
+'''
+
+# Third param
+[directory]
+format = "[╭─  $path]($style)"
+style = "bold green"
+truncate_to_repo = true
+home_symbol = "~"
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+style = "bold purple"
+truncation_symbol = "..."
+truncation_length = 35
+
+[git_status]
+style = "red"
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+deleted = "x"
+
+[character]
+success_symbol = " [╰─λ](bold green)"
+error_symbol = " [×](bold red)"
+vicmd_symbol = "[╰─λ](bold red) "
+
+[aws]
+symbol = " "
+[docker_context]
+symbol = " "
+[golang]
+symbol = " "
+[hg_branch]
+symbol = " "
+[ruby]
+symbol = " "
+
+[username]
+format = " [╭─$user]($style) in "
+style_user = "green"
+style_root = "bold red"
+show_always = true
+
+[hostname]
+format = "[$hostname]($style) in "
+style = "bold dimmed red"
+trim_at = "-"
+ssh_only = true
+disabled = false

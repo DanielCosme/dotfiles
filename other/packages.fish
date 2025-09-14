@@ -92,7 +92,12 @@ sudo pacman -S --noconfirm --needed \
     foot \
     foot-terminfo \
     syncthing \
-    ly # Terminal based login screen thing.
+    # Terminal based login screen thing.
+    ly \
+    go \
+    go-task \
+    tree \
+    neovide
 
 if not command -q yay
     echo Seting up AUR
@@ -112,6 +117,3 @@ yay -S --noconfirm --needed \
     spotify \
     tlrc-bin \
     logseq-desktop-bin
-
-# To consider
-#   avahi

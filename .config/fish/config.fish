@@ -4,6 +4,8 @@ fish_add_path ~/.local/share/dabs/bin
 
 set fish_greeting
 
+starship init fish | source
+
 # environment
 set -gx XDG_CONFIG_HOME $HOME/.config
 set -gx XDG_USER_CONFIG_DIR $XDG_CONFIG_HOME

@@ -22,6 +22,9 @@
       "tooltip-format": "Devices connected: {num_connections}",
       "on-click": "blueberry"
     },
+    "hyprland/window": {
+      "separate-outputs": true
+    },
     // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
