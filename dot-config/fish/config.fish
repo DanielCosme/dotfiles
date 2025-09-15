@@ -1,6 +1,5 @@
 fish_vi_key_bindings
 fish_user_key_bindings
-fish_add_path ~/.local/share/dabs/bin
 
 set fish_greeting
 
@@ -42,8 +41,8 @@ if test -d ~/.local/bin
     end
 end
 
-abbr -a gs git status .
-abbr -a ga git add
+abbr -a gis git status .
+abbr -a gia git add
 abbr -a nv neovide --fork
 abbr -a vi nvim
 # Kubernetes

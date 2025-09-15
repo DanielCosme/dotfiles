@@ -1,3 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
-stow --dotfiles -v .
+stow  --verbose --dotfiles .
+sudo stow  --verbose --dir ./dabs/config --target /etc/ly ly

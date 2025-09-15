@@ -100,7 +100,11 @@ sudo pacman -S --noconfirm --needed \
     go-task \
     tree \
     neovide \
-    tailscale
+    tailscale \
+    mpv \
+    ark \
+    kcalc \
+    archlinux-xdg-menu
 
 if not command -q yay
     echo Seting up AUR
