@@ -42,6 +42,10 @@ if test -d ~/.local/bin
     end
 end
 
+abbr -a gs git status .
+abbr -a ga git add
+abbr -a nv neovide --fork
+abbr -a vi nvim
 # Kubernetes
 abbr -a kk kubectl
 abbr -a kks sudo kubectl

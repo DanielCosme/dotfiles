@@ -24,6 +24,11 @@ sudo pacman -S --noconfirm --needed \
     ghostty \
     fontconfig \
     ttf-cascadia-mono-nerd \
+    ttf-jetbrains-mono-nerd \
+    ttf-iosevka-nerd \
+    ttf-iosevkaterm-nerd \
+    ttf-firacode-nerd \
+    ttf-liberation-mono-nerd \
     pavucontrol \
     bat \
     blueberry \
@@ -37,7 +42,6 @@ sudo pacman -S --noconfirm --needed \
     eza \
     fastfetch \
     fd \
-    fontconfig \
     fzf \
     gcc14 \
     github-cli \
@@ -50,6 +54,7 @@ sudo pacman -S --noconfirm --needed \
     hyprshot \
     hyprsunset \
     hyprpolkitagent \
+    hyprpaper \
     xdg-desktop-portal-hyprland \
     mako \
     waybar \
@@ -80,11 +85,8 @@ sudo pacman -S --noconfirm --needed \
     qt5-wayland \
     ripgrep \
     starship \
-    swaybg \
     swayosd \
     tree-sitter-cli \
-    ttf-cascadia-mono-nerd \
-    ttf-jetbrains-mono-nerd \
     unzip \
     woff2-font-awesome \
     xdg-desktop-portal-gtk \
@@ -97,7 +99,8 @@ sudo pacman -S --noconfirm --needed \
     go \
     go-task \
     tree \
-    neovide
+    neovide \
+    tailscale
 
 if not command -q yay
     echo Seting up AUR

@@ -13,3 +13,5 @@ sudo systemctl enable ly
 sudo cp $HOME/.dotfiles/other/ly/config.ini /etc/ly/config.ini
 # sudo cp $HOME/.dotfiles/other/limine/limine.conf /boot/
 fc-cache -fv
+sudo systemctl enable --now tailscaled
+sudo tailscale set --operator=$USER
