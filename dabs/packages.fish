@@ -105,7 +105,8 @@ sudo pacman -S --noconfirm --needed \
     mpv \
     ark \
     kcalc \
-    archlinux-xdg-menu
+    archlinux-xdg-menu \
+    lf
 
 if not command -q yay
     echo Seting up AUR
