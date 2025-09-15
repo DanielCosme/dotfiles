@@ -83,6 +83,7 @@ sudo pacman -S --noconfirm --needed \
     pamixer \
     playerctl \
     qt5-wayland \
+    qt5ct \
     ripgrep \
     starship \
     swayosd \
@@ -123,4 +124,5 @@ yay -S --noconfirm --needed \
     zen-browser-bin \
     spotify \
     tlrc-bin \
-    logseq-desktop-bin
+    logseq-desktop-bin \
+    qt6ct-kde
