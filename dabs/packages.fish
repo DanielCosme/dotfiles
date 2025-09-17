@@ -106,7 +106,9 @@ sudo pacman -S --noconfirm --needed \
     ark \
     kcalc \
     archlinux-xdg-menu \
-    lf
+    lf \
+    wtype \
+    entr
 
 if not command -q yay
     echo Seting up AUR
