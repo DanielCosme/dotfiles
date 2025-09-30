@@ -9,8 +9,8 @@ title-hidden = false
 vsync = true
 
 [font]
-normal = [IosevkaTerm Nerd Font] # Will use the bundled Fira Code Nerd Font by default
-size = 14.0
+normal = ["IosevkaTerm Nerd Font"] # Will use the bundled Fira Code Nerd Font by default
+size = 16.0
 
 [box-drawing]
 # "font-glyph", "native" or "selected-native"
