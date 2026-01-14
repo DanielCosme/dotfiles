@@ -43,9 +43,8 @@ if test -d ~/.local/bin
     end
 end
 
-abbr -a gis git status .
-abbr -a gia git add
 abbr -a nv neovide --fork
+abbr -a mm mage
 abbr -a vi nvim
 # Kubernetes
 abbr -a kk kubectl
