@@ -36,6 +36,12 @@ end
 set -gx NPM_CONFIG_PREFIX $NPM_PACKAGES
 fish_add_path $NPM_PACKAGES/bin
 
+set -gx GEM_HOME "$HOME/.local/gems"
+if test ! -d $GEM_HOME
+    mkdir -p $GEM_HOME
+end
+fish_add_path $GEN_HOME
+
 # Add ~/.local/bin to PATH
 if test -d ~/.local/bin
     if not contains -- ~/.local/bin $PATH
