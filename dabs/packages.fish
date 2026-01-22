@@ -108,7 +108,10 @@ sudo pacman -S --noconfirm --needed \
     archlinux-xdg-menu \
     lf \
     wtype \
-    entr
+    entr \
+    ruby \
+    ruby-rdoc \
+    ruby-docs
 
 if not command -q yay
     echo Seting up AUR

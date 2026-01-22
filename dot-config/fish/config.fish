@@ -3,7 +3,9 @@ fish_user_key_bindings
 
 set fish_greeting
 
-starship init fish | source
+if type -q starship
+    starship init fish | source
+end
 
 # environment
 set -gx XDG_CONFIG_HOME $HOME/.config
@@ -36,11 +38,10 @@ end
 set -gx NPM_CONFIG_PREFIX $NPM_PACKAGES
 fish_add_path $NPM_PACKAGES/bin
 
-set -gx GEM_HOME "$HOME/.local/gems"
-if test ! -d $GEM_HOME
-    mkdir -p $GEM_HOME
+if type -q ruby
+    set -gx GEM_HOME (ruby -e 'puts Gem.user_dir')
+    fish_add_path $GEM_HOME/bin
 end
-fish_add_path $GEN_HOME
 
 # Add ~/.local/bin to PATH
 if test -d ~/.local/bin
