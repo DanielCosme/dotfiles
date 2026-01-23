@@ -109,9 +109,7 @@ sudo pacman -S --noconfirm --needed \
     lf \
     wtype \
     entr \
-    ruby \
-    ruby-rdoc \
-    ruby-docs
+    ruby
 
 if not command -q yay
     echo Seting up AUR
