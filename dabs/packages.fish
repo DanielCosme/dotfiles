@@ -109,7 +109,9 @@ sudo pacman -S --noconfirm --needed \
     lf \
     wtype \
     entr \
-    ruby
+    ruby \
+    hugo \
+    rsync
 
 if not command -q yay
     echo Seting up AUR
