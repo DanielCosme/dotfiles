@@ -8,8 +8,11 @@ if type -q starship
 end
 
 # environment
+set -gx XDG_CACHE_HOME $HOME/.cache
 set -gx XDG_CONFIG_HOME $HOME/.config
 set -gx XDG_USER_CONFIG_DIR $XDG_CONFIG_HOME
+set -gx XDG_DATA_HOME $HOME/.local/share
+set -gx XDG_STATE_HOME $HOME/.local/state
 set -gx BROWSER brave
 set -gx EDITOR nvim
 
@@ -53,6 +56,7 @@ end
 abbr -a nv neovide --fork
 abbr -a mm mage
 abbr -a vi nvim
+abbr -a untar tar -xzvf
 # Kubernetes
 abbr -a kk kubectl
 abbr -a kks sudo kubectl
