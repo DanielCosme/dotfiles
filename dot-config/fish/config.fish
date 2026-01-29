@@ -13,6 +13,7 @@ set -gx XDG_CONFIG_HOME $HOME/.config
 set -gx XDG_USER_CONFIG_DIR $XDG_CONFIG_HOME
 set -gx XDG_DATA_HOME $HOME/.local/share
 set -gx XDG_STATE_HOME $HOME/.local/state
+set -gx AGE_KEY $XDG_DATA_HOME/.age.txt
 set -gx BROWSER brave
 set -gx EDITOR nvim
 
