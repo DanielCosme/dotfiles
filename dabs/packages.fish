@@ -111,7 +111,8 @@ sudo pacman -S --noconfirm --needed \
     entr \
     ruby \
     hugo \
-    rsync
+    rsync \
+    tea
 
 if not command -q yay
     echo Seting up AUR
