@@ -27,6 +27,7 @@ vim.o.backup = false
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.o.ignorecase = true
 vim.o.smartcase = true
+vim.o.colorcolumn = '100'
 
 vim.opt.hlsearch = true -- Set highlight on search
 vim.opt.incsearch = true
