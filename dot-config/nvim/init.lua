@@ -27,7 +27,6 @@ vim.o.backup = false
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.o.ignorecase = true
 vim.o.smartcase = true
-vim.o.colorcolumn = '100'
 
 vim.opt.hlsearch = true -- Set highlight on search
 vim.opt.incsearch = true
@@ -54,6 +53,10 @@ vim.o.scrolloff = 6 -- Minimal number of screen lines to keep above and below th
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
 vim.o.confirm = true
+
+vim.o.colorcolumn = '100'
+-- vim.o.spell = true
+-- vim.o.spelllang = 'en_us'
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
@@ -506,6 +509,7 @@ require('lazy').setup({
         solargraph = {},
         clangd = {},
         gopls = {},
+        harper_ls = {},
         ols = {},
         -- pyright = {},
         -- rust_analyzer = {},
