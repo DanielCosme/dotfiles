@@ -6,5 +6,5 @@
 [credential "https://github.com"]
 	helper = !/usr/bin/gh auth git-credential
 
-[credential]
-	helper = store
+[credential "https://git.danicos.dev"]
+helper = store

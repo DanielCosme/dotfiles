@@ -1,3 +1,0 @@
-#!/usr/bin/env fish
-
-brave http://localhost:8384
