@@ -3,8 +3,3 @@
 	name = Daniel Cosme
 [init]
 	defaultBranch = main
-[credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
-
-[credential "https://git.danicos.dev"]
-helper = store
