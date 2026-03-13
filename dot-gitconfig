@@ -1,5 +1,15 @@
 [user]
-	email = cosmedaniel8@gmail.com
-	name = Daniel Cosme
+  email = cosmedaniel8@gmail.com
+  name = Daniel Cosme
 [init]
-	defaultBranch = main
+  defaultBranch = main
+
+[credential "https://github.com"]
+  helper = !/usr/bin/gh auth git-credential
+
+[includeIf "gitdir:/Users/"]
+    path = ~/.gitconfig-macos
+
+[includeIf "gitdir:/home/"]
+    path = ~/.gitconfig-linux
+
