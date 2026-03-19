@@ -13,3 +13,5 @@
 [includeIf "gitdir:/home/"]
     path = ~/.gitconfig-linux
 
+[url "https://a81f417c0b534665623a7c9f5942e70519fed185@danicos.dev/"]
+	insteadOf = https://danicos.dev/

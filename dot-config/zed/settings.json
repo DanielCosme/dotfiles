@@ -1,0 +1,59 @@
+{
+  "inlay_hints": {
+    "show_other_hints": true,
+    "enabled": true,
+    "show_parameter_hints": true,
+    "show_type_hints": false,
+    "show_value_hints": true,
+    "show_background": false
+  },
+  "preferred_line_length": 100,
+  "hard_tabs": true,
+  "tab_size": 2,
+  "vim": {
+    "cursor_shape": {
+      "insert": "bar"
+    },
+    "use_smartcase_find": false
+  },
+  "toolbar": {
+    "code_actions": false
+  },
+  "gutter": {
+    "breakpoints": true,
+    "folds": false,
+    "min_line_number_digits": 0,
+    "runnables": true,
+    "line_numbers": false
+  },
+  "agent": {
+    "default_model": {
+      "provider": "x_ai",
+      "model": "grok-3",
+      "enable_thinking": false
+    },
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "which_key": {
+    "delay_ms": 250,
+    "enabled": true
+  },
+  "vim_mode": true,
+  "base_keymap": "JetBrains",
+  "cursor_shape": "block",
+  "agent_ui_font_size": 20.0,
+  "ui_font_size": 20.0,
+  "buffer_line_height": "comfortable",
+  "buffer_font_weight": 400.0,
+  "buffer_font_size": 20.0,
+  "buffer_font_family": "Iosevka Nerd Font Mono",
+  "theme": {
+    "mode": "system",
+    "light": "One Dark",
+    "dark": "One Dark",
+  },
+  "session": {
+    "trust_all_worktrees": true,
+  },
+}
