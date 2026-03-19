@@ -3,7 +3,9 @@
     "context": "Editor && vim_mode == normal && !menu",
     "bindings": {
       "space f": "file_finder::Toggle",
-      "space s": "project_symbols::Toggle"
+      "space s": "project_symbols::Toggle",
+      "g d a": "diagnostics::Deploy",
+      "g d f": "diagnostics::DeployCurrentFile"
     }
   },
   {
@@ -40,6 +42,73 @@
     "context": "(!Editor && !Terminal)",
     "bindings": {
       "space g": "pane::DeploySearch"
+    }
+  },
+  {
+    "context": "((VimControl && !menu) || (!Editor && !Terminal))",
+    "bindings": {
+      "g o": "vim::GoToTab",
+      "g u": "vim::GoToPreviousTab"
+    }
+  },
+  {
+    "context": "((VimControl && !menu) || (!Editor && !Terminal))",
+    "bindings": {
+      "space k": "workspace::ActivatePaneUp"
+    }
+  },
+  {
+    "context": "((VimControl && !menu) || (!Editor && !Terminal))",
+    "bindings": {
+      "space j": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "((VimControl && !menu) || (!Editor && !Terminal))",
+    "bindings": {
+      "space h": "workspace::ActivatePaneLeft"
+    }
+  },
+  {
+    "context": "((VimControl && !menu) || (!Editor && !Terminal))",
+    "bindings": {
+      "space l": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "Editor && vim_mode==normal && !menu",
+    "bindings": {
+      "space z": "workspace::ToggleZoom",
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "ctrl-w c": "pane::CloseActiveItem"
+  }
+},
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space space": "tab_switcher::Toggle"
+    }
+  },
+  {
+    "context": "Editor&&vim_mode==normal&&!menu",
+    "bindings": {
+      "\\": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "ProjectPanel&&not_editing",
+    "bindings": {
+      "\\": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "TabSwitcher",
+    "bindings": {
+      "d": "tab_switcher::CloseSelectedItem"
     }
   }
 ]
