@@ -5,7 +5,9 @@
       "space f": "file_finder::Toggle",
       "space s": "project_symbols::Toggle",
       "g d a": "diagnostics::Deploy",
-      "g d f": "diagnostics::DeployCurrentFile"
+      "g d f": "diagnostics::DeployCurrentFile",
+      "space space": "tab_switcher::Toggle",
+      "g t": "terminal_panel::Toggle"
     }
   },
   {
@@ -90,7 +92,6 @@
   {
     "context": "Workspace",
     "bindings": {
-      "space space": "tab_switcher::Toggle"
     }
   },
   {
@@ -109,6 +110,12 @@
     "context": "TabSwitcher",
     "bindings": {
       "d": "tab_switcher::CloseSelectedItem"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-l": "workspace::ToggleRightDock"
     }
   }
 ]
