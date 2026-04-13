@@ -2,7 +2,11 @@
   "file_types": {
     "HCL": ["*.alloy"]
   },
-	"icon_theme": "Colored Zed Icons Theme Dark",
+	"icon_theme": {
+    "mode": "light",
+    "light": "Colored Zed Icons Theme Dark",
+    "dark": "Colored Zed Icons Theme Dark"
+  },
 	"git": {
 		"inline_blame": {
 			"enabled": false,

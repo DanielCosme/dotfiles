@@ -21,33 +21,33 @@ vim.schedule(function()
 end)
 
 vim.o.breakindent = true -- Enable break indent
-vim.o.undofile = true -- Save undo history
+vim.o.undofile = true    -- Save undo history
 vim.o.swapfile = false
 vim.o.backup = false
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
-vim.opt.hlsearch = true -- Set highlight on search
+vim.opt.hlsearch = true  -- Set highlight on search
 vim.opt.incsearch = true
 vim.o.signcolumn = 'yes' -- Keep signcolumn on by default
-vim.o.updatetime = 250 -- Decrease update time
-vim.o.timeoutlen = 300 -- Decrease mapped sequence wait time
+vim.o.updatetime = 250   -- Decrease update time
+vim.o.timeoutlen = 300   -- Decrease mapped sequence wait time
 
 -- Configure how new splits should be opened
 vim.o.splitright = true
 vim.o.splitbelow = true
 vim.o.expandtab = true -- insert spaces when tab is pressed
-vim.o.tabstop = 2 -- number of spaces inserted when tab key pressed
-vim.o.softtabstop = 2 -- number of spaces inserted when tab key pressed
-vim.o.shiftwidth = 2 -- number of spaces inserted by < & > indent motions
+vim.o.tabstop = 2      -- number of spaces inserted when tab key pressed
+vim.o.softtabstop = 2  -- number of spaces inserted when tab key pressed
+vim.o.shiftwidth = 2   -- number of spaces inserted by < & > indent motions
 vim.o.autowrite = true
 vim.o.autoread = true
-vim.o.hidden = true -- allow buffer to be hidden if modified.
+vim.o.hidden = true        -- allow buffer to be hidden if modified.
 vim.o.fileencoding = 'utf-8'
 vim.o.inccommand = 'split' -- Preview substitutions live, as you type!
-vim.o.cursorline = true -- Show which line your cursor is on
-vim.o.scrolloff = 6 -- Minimal number of screen lines to keep above and below the cursor.
+vim.o.cursorline = true    -- Show which line your cursor is on
+vim.o.scrolloff = 6        -- Minimal number of screen lines to keep above and below the cursor.
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
@@ -163,7 +163,7 @@ require('lazy').setup({
   -- Then, because we use the `opts` key (recommended), the configuration runs
   -- after the plugin has been loaded as `require(MODULE).setup(opts)`.
 
-  { -- Useful plugin to show you pending keybinds.
+  {                     -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
     opts = {
@@ -214,7 +214,7 @@ require('lazy').setup({
       { 'nvim-telescope/telescope-ui-select.nvim' },
 
       -- Useful for getting pretty icons, but requires a Nerd Font.
-      { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+      { 'nvim-tree/nvim-web-devicons',            enabled = vim.g.have_nerd_font },
     },
     config = function()
       -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -322,7 +322,7 @@ require('lazy').setup({
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
       -- Useful status updates for LSP.
-      { 'j-hui/fidget.nvim', opts = {} },
+      { 'j-hui/fidget.nvim',    opts = {} },
 
       -- Allows extra capabilities provided by blink.cmp
       'saghen/blink.cmp',
