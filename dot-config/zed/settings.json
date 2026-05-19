@@ -13,8 +13,8 @@
   },
 	"git": {
 		"inline_blame": {
-			"enabled": false,
-		},
+			"enabled": false
+		}
 	},
 	"collaboration_panel": {
 		"dock": "left",
@@ -145,7 +145,7 @@
 	"theme": {
 		"mode": "dark",
 		"light": "Solarized Light",
-		"dark": "Gruvbox Dark",
+		"dark": "Omazed"
 	},
 	"session": {
 		"trust_all_worktrees": true,
