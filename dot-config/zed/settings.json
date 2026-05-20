@@ -7,7 +7,7 @@
     "HCL": ["*.alloy"]
   },
 	"icon_theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Colored Zed Icons Theme Dark",
     "dark": "Colored Zed Icons Theme Dark"
   },
