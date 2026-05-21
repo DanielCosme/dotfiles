@@ -4,6 +4,8 @@ vim.g.have_nerd_font = true
 vim.g.autoformat = true
 vim.g.trouble_lualine = true
 vim.g.markdown_recommended_style = 0
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 local opt = vim.opt
 
