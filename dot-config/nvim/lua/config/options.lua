@@ -41,7 +41,7 @@ opt.incsearch = true  -- Show matches as you type
 -- Visual settings
 opt.termguicolors = true  -- Enable 24-bit colors
 opt.signcolumn = "yes"    -- Always show sign column
-opt.showmatch = true      -- Highlight matching brackets
+opt.showmatch = false     -- Highlight matching brackets
 opt.cmdheight = 1         -- Command line height
 opt.pumheight = 10        -- Popup menu height
 opt.pumblend = 10         -- Popup menu transparency

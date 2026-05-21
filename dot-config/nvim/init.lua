@@ -1,5 +1,6 @@
 require "config"
 
+--- NeoTree
 vim.pack.add({
 	{
 		name = 'neo-tree',
@@ -26,3 +27,15 @@ require('neo-tree').setup({
 		},
 	},
 })
+
+--- LSP ---
+vim.pack.add{
+  { src = 'https://github.com/neovim/nvim-lspconfig' },
+}
+vim.lsp.enable(
+  {
+    "lua_ls",
+    "gopls",
+    "bashls"
+  }
+)
