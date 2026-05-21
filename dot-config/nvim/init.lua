@@ -1,41 +1,12 @@
-require "config"
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
---- NeoTree
-vim.pack.add({
-	{
-		name = 'neo-tree',
-		src = 'https://github.com/nvim-neo-tree/neo-tree.nvim',
-		version = vim.version.range('3')
-	},
-	"https://github.com/nvim-lua/plenary.nvim",
-	"https://github.com/MunifTanjim/nui.nvim",
-	"https://github.com/nvim-tree/nvim-web-devicons",
-})
+require "config"   -- Load configs first
+require "plugins"  -- Then load pluginsequire "config"
 
-vim.keymap.set("n", "\\", "<Cmd>Neotree<CR>")
+vim.cmd("syntax on")
+vim.cmd("colorscheme habamax")
 
-require('neo-tree').setup({
-	close_if_last_window = true,
-	window = {
-		position = "right"
-	},
-	filesystem = {
-		window = {
-			mappings = {
-				["\\"] = "close_window",
-			},
-		},
-	},
-})
 
---- LSP ---
-vim.pack.add{
-  { src = 'https://github.com/neovim/nvim-lspconfig' },
-}
-vim.lsp.enable(
-  {
-    "lua_ls",
-    "gopls",
-    "bashls"
-  }
-)
+
+

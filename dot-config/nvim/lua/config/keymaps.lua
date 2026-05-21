@@ -4,15 +4,17 @@ local opts = { remap = false, silent = true } -- "remap = false" is equivalent t
 map('n', ';', ':')
 map('n', '<Esc>', '<cmd>nohlsearch<CR>') -- Clear highlights on search when pressing <Esc> in normal mode. See `:help hlsearch`
 map("v", "p", '"_dP', opts)              -- Better paste (doesn't replace clipboard with deleted text)
+map("n", "<leader>pu", "<cmd>lua vim.pack.update()<CR>")
+
 
 ------------ BUFFER NAVIGATION ------------
 
-map('n', '<C-k>', ':bn <CR>', { desc = 'Move to next buffer' })
-map('n', '<C-j>', ':bp <CR>', { desc = 'Move to previous buffer' })
+-- map('n', '<C-k>', ':bn <CR>', { desc = 'Move to next buffer' })
+-- map('n', '<C-j>', ':bp <CR>', { desc = 'Move to previous buffer' })
 map("n", "<Tab>", ":bnext<CR>", { desc = "Next buffer" })
 map("n", "<S-Tab>", ":bprevious<CR>", { desc = "Previous buffer" })
-map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
-map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+-- map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
+-- map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 -- Quick switch to last edited file (super useful!)
 map("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 
