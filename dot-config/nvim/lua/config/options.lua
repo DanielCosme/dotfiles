@@ -8,10 +8,9 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 local opt = vim.opt
-
-opt.number = false    -- Line numbers
-opt.mouse = "a"       -- Enable mouse support
-opt.showmode = false  -- Don't show the mode, since it's already in the status line
+opt.number = false -- Line numbers
+opt.mouse = "a"    -- Enable mouse support
+-- opt.showmode = false  -- Don't show the mode, since it's already in the status line
 
 opt.cursorline = true -- Show which line your cursor is on
 opt.wrap = false      -- Don't wrap lines
@@ -46,7 +45,6 @@ opt.cmdheight = 1         -- Command line height
 opt.pumheight = 10        -- Popup menu height
 opt.pumblend = 10         -- Popup menu transparency
 opt.winblend = 0          -- Floating window transparency
-opt.completeopt = "menu,menuone,noselect"
 opt.conceallevel = 2      -- Hide * markup for bold and italic, but not markers with substitutions
 opt.synmaxcol = 300       -- Syntax highlighting limit
 opt.virtualedit = "block" -- Allow cursor to move where there is no text in visual block mode
@@ -80,6 +78,12 @@ opt.selection = "exclusive"        -- Selection behavior
 opt.encoding = "UTF-8"             -- Set encoding
 opt.inccommand = 'split'           -- Preview substitutions live, as you type!
 
+-- Autocomplete
+opt.autocomplete = false
+opt.pumborder = 'rounded'
+opt.pummaxwidth = 40
+opt.completeopt = "menu,menuone,noselect"
+
 -- Command-line completion
 opt.wildmenu = true
 opt.wildmode = "longest:full,full"
@@ -94,11 +98,10 @@ opt.redrawtime = 10000
 opt.maxmempattern = 20000
 
 opt.jumpoptions = "view"
-opt.laststatus = 3 -- global statusline
-opt.list = false
+opt.laststatus = 3   -- global statusline
+opt.list = true      -- Show some invisible characters (tabs...
 opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 opt.linebreak = true -- Wrap lines at convenient points
-opt.list = true      -- Show some invisible characters (tabs...
 
 -- Folding settings
 -- opt.smoothscroll = true

@@ -1,12 +1,12 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-require "config"   -- Load configs first
-require "plugins"  -- Then load pluginsequire "config"
+require "config"
+require "plugins"
 
 vim.cmd("syntax on")
-vim.cmd("colorscheme habamax")
+vim.cmd("packadd nvim.undotree")
+vim.cmd("packadd nvim.difftool")
 
-
-
-
+-- Experimental
+require('vim._core.ui2').enable()
