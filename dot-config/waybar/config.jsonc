@@ -17,8 +17,8 @@
 	"modules-right": [
 		"group/tray-expander",
 		"bluetooth",
-		"network",
 		"pulseaudio",
+		"network",
 		"memory",
 		"cpu",
 		"battery",
