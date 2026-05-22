@@ -57,7 +57,6 @@ opt.swapfile = false                          -- Don't create swap files
 opt.undofile = true                           -- Persistent undo
 opt.undolevels = 10000
 opt.undodir = vim.fn.expand("~/.vim/undodir") -- Undo directory
-opt.updatetime = 250                          -- Faster completion
 opt.timeoutlen = 300                          -- Decrease mapped sequence wait time
 opt.ttimeoutlen = 0                           -- Key code timeout
 opt.autoread = true                           -- Auto reload files changed outside vim
@@ -80,9 +79,11 @@ opt.inccommand = 'split'           -- Preview substitutions live, as you type!
 
 -- Autocomplete
 opt.autocomplete = false
+opt.autocompletedelay = 2000 -- In millis
 opt.pumborder = 'rounded'
 opt.pummaxwidth = 40
-opt.completeopt = "menu,menuone,noselect"
+opt.completeopt = "menu,menuone,noselect,popup"
+opt.updatetime = 250 -- Faster completion
 
 -- Command-line completion
 opt.wildmenu = true
