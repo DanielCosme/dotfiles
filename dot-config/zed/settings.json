@@ -82,7 +82,7 @@
 	"diagnostics": {
 		"button": true,
 		"inline": {
-			"enabled": false,
+			"enabled": true,
 		},
 	},
 	"semantic_tokens": "off",
@@ -141,7 +141,7 @@
 	"theme": {
 		"mode": "dark",
 		"light": "Solarized Light",
-		"dark": "Omazed",
+		"dark": "One Dark",
 	},
 	"session": {
 		"trust_all_worktrees": true,
