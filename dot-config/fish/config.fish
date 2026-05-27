@@ -39,7 +39,7 @@ fish_add_path $PNPM_HOME
 if test ! -d "$HOME/.npm_packages"
     mkdir "$HOME/.npm_packages"
 end
-set -gx NPM_CONFIG_PREFIX $NPM_PACKAGES
+# set -gx NPM_CONFIG_PREFIX $NPM_PACKAGES
 fish_add_path $NPM_PACKAGES/bin
 
 if type -q ruby
