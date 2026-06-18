@@ -12,6 +12,7 @@ require("nvim-treesitter").install({
   "css",
 	"javascript",
   "c",
+  "cpp",
 })
 
 vim.api.nvim_create_autocmd("FileType", {
