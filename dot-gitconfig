@@ -12,3 +12,6 @@
 
 [includeIf "gitdir:/home/"]
     path = ~/.gitconfig-linux
+[credential]
+	helper = cache --timeout 21600
+	helper = oauth -device
