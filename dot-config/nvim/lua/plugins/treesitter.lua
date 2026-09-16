@@ -13,6 +13,7 @@ require("nvim-treesitter").install({
 	"javascript",
   "c",
   "cpp",
+  "rust-analyzer",
 })
 
 vim.api.nvim_create_autocmd("FileType", {
