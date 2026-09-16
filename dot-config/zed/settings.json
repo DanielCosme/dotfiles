@@ -147,8 +147,8 @@
 	"buffer_font_family": "Iosevka Nerd Font Mono",
 	"theme": {
 		"mode": "dark",
-		"light": "Solarized Light",
-		"dark": "One Dark",
+		"light": "One Light",
+		"dark": "Nordfox - opaque",
 	},
 	"session": {
 		"trust_all_worktrees": true,
