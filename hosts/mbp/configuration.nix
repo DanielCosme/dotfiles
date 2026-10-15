@@ -4,12 +4,12 @@
   system.primaryUser = "daniel";
 
   programs.fish.enable = true;
-  
+
   users.knownUsers = [ "daniel" ];
 
   # Enable experimental features declaratively
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+
   users.users.daniel = {
     name = "daniel";
     home = "/Users/daniel";
@@ -26,7 +26,7 @@
   homebrew = {
     enable = true;
     onActivation.cleanup = "zap";
-    casks = [ "ghostty" "bitwarden" "brave-browser" ];
+    casks = [ "ghostty" "bitwarden" "brave-browser" "zed" ];
   };
 
   # macOS preferences
