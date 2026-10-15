@@ -1,5 +1,6 @@
 cask "ghostty" 
 cask "bitwarden"
 cask "brave-browser"
+cask "logseq"
 
 cask "discord"
