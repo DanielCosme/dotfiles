@@ -1,2 +1,2 @@
 # Dotfiles
-This repository contains my Personal Linux configuration files.
+This repository contains my Personal UNIX configuration files.
