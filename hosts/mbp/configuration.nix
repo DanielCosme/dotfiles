@@ -32,11 +32,19 @@
   # macOS preferences
   # https://nix-darwin.github.io/nix-darwin/manual/
   system.defaults = {
-    dock.autohide = false;
+    dock.autohide = true;
     dock.orientation = "left";
     finder.AppleShowAllFiles = false;
     NSGlobalDomain.KeyRepeat = 1;
-    NSGlobalDomain.InitialKeyRepeat = 10;
+    NSGlobalDomain.InitialKeyRepeat = 20;
+
+   CustomUserPreferences."com.apple.AppleMultitouchMouse" = {
+     MouseMomentumScroll = false;
+
+     ".GlobalPreferences" = {
+        "com.apple.scrollwheel.scaling" = -1.0;  # or 0 / a small float
+      };
+     };
   };
 
   # Determinate installer manages Nix itself

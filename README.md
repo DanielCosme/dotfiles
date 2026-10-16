@@ -7,3 +7,10 @@ The Stack
 - **nix-darwin** System-level macOS configuration (packages, system preferences, services)
 - **home-manager** User-level config (dotfiles, shell, programs)
 - *Flakes** Modern way to pin dependencies and make builds reproducible.
+
+## TODOS
+### Home Manager
+- Manage Zed configuration via Homemanager
+- Manager Fish shell configuration via Homemanager
+- Rex configuration
+- Git configuration
