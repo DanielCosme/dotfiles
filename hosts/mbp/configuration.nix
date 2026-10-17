@@ -19,7 +19,7 @@
 
   # CLI tools (replaces brew install)
   environment.systemPackages = with pkgs; [
-    git fish neovim tree
+    git fish neovim tree btop
   ];
 
   # GUI apps (declarative Homebrew)
