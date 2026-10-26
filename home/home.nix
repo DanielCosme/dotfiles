@@ -17,4 +17,14 @@
   programs.starship.enable = true;
 
   home.stateVersion = "24.11";
+
+  home.packages = with pkgs; [
+   bitwarden-cli
+   git
+   fish
+   neovim
+   tree
+   btop
+   cloc
+  ];
 }
