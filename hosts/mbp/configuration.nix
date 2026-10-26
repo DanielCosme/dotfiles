@@ -26,7 +26,7 @@
   homebrew = {
     enable = true;
     onActivation.cleanup = "zap";
-    casks = [ "ghostty" "bitwarden" "brave-browser" "zed" ];
+    casks = [ "ghostty" "bitwarden" "brave-browser" "zed" "amethyst"];
   };
 
   # macOS preferences
@@ -34,11 +34,12 @@
   system.defaults = {
     dock.autohide = true;
     dock.orientation = "left";
+    dock.mru-spaces = false;
     finder.AppleShowAllFiles = false;
     NSGlobalDomain.KeyRepeat = 1;
     NSGlobalDomain.InitialKeyRepeat = 20;
 
-   CustomUserPreferences."com.apple.AppleMultitouchMouse" = {
+    CustomUserPreferences."com.apple.AppleMultitouchMouse" = {
      MouseMomentumScroll = false;
 
      ".GlobalPreferences" = {
