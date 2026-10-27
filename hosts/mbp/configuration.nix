@@ -64,6 +64,14 @@
         "com.apple.scrollwheel.scaling" = -1.0;  # or 0 / a small float
       };
      };
+
+    # Rex has no font option in init.lua; it reads the font from its app preferences
+    CustomUserPreferences."com.superlogical.rex" = {
+      "Workspace.terminalFontName" = "Iosevka NFM";
+      "Workspace.terminalFontPointSize" = 18.0;
+      # Move Hide off cmd+h (now previous tab in rex/init.lua) to cmd+ctrl+opt+shift+h
+      NSUserKeyEquivalents."Hide Rex Beta" = "@^~$h";
+    };
   };
 
   # Determinate installer manages Nix itself

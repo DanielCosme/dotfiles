@@ -95,6 +95,7 @@
       user.email = "cosmedaniel8@gmail.com";
       push.autoSetupRemote = true;
       init.defaultBranch = "main";
+      alias.st = "status";
     };
   };
 
@@ -102,6 +103,21 @@
   programs.gh.enable = true;
 
   programs.starship.enable = true;
+
+  programs.vim = {
+    enable = true;
+    # The default build uses the X11 clipboard; darwinSupport makes unnamedplus reach the macOS one
+    packageConfigurable = pkgs.vim-full.override {
+      darwinSupport = true;
+      guiSupport = "none";
+    };
+    # mkForce: the module always merges in vim-sensible, which the old setup did not use
+    plugins = lib.mkForce [ ];
+    extraConfig = builtins.readFile ./vim/vimrc;
+  };
+
+  # vimrc sets undodir here, and vim won't create it
+  home.file.".vim/undodir/.keep".text = "";
 
   # Zed writes to its config from the UI, so link to the repo instead of the read-only store
   xdg.configFile."zed/settings.json".source =
@@ -111,12 +127,31 @@
   xdg.configFile."zed/snippets".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/code/dotfiles/home/zed/snippets";
 
+  # Linked to the repo so edits apply with `rex config reload`, no rebuild needed
+  xdg.configFile."rex/init.lua".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/code/dotfiles/home/rex/init.lua";
+
   home.stateVersion = "24.11";
 
   programs.neovim = {
   	enable = true;
    	defaultEditor = true;
+    # The config uses no remote plugins; also silences the stateVersion default warnings
+    withRuby = false;
+    withPython3 = false;
+    # On nvim's PATH only: LSPs from config/lsp.lua and the CLI nvim-treesitter main builds parsers with
+    extraPackages = with pkgs; [
+      lua-language-server
+      bash-language-server
+      tree-sitter
+    ];
   };
+
+  # vim.pack writes nvim-pack-lock.json into the config dir, so link to the repo,
+  # and drop the init.lua home-manager would generate in favour of ours
+  xdg.configFile."nvim/init.lua".enable = lib.mkForce false;
+  xdg.configFile."nvim".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/code/dotfiles/home/nvim";
 
   home.packages = with pkgs; [
    bitwarden-cli
@@ -127,5 +162,8 @@
    gopls
    gotools
    nixd
+   ripgrep
+   fd
+   fzf
   ];
 }
