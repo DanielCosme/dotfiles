@@ -9,10 +9,14 @@
     enable = true;
     settings = {
       user.name = "Daniel Cosme";
-      user.email = "danicosme@pm.me";
+      user.email = "danielcosme8@gmail.com";
       push.autoSetupRemote = true;
+      init.defaultBranch = "main";
     };
   };
+
+  # Sets itself as the credential helper for github.com
+  programs.gh.enable = true;
 
   programs.starship.enable = true;
 

@@ -14,6 +14,11 @@
   # Enable experimental features declaratively
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  security.pam.services.sudo_local = {
+    touchIdAuth = true;   # pam_tid.so: fingerprint for sudo
+    reattach = true;      # pam_reattach: makes it work inside Rex/tmux panes
+  };
+
   users.users.daniel = {
     name = "daniel";
     home = "/Users/daniel";
