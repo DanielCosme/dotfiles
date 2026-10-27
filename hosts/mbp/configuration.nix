@@ -1,6 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
+  # Allow only the unfree packages listed here
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [ "claude-code" ];
+
   system.primaryUser = "daniel";
 
   programs.fish.enable = true;
@@ -23,8 +27,12 @@
     nodejs
     protobuf
     colima
-    docker
     docker-compose
+    claude-code
+  ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.iosevka
   ];
 
   # GUI apps (declarative Homebrew)

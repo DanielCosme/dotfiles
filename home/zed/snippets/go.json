@@ -1,0 +1,11 @@
+{
+"Go Error": {
+    "prefix": "ger",
+    "body": [
+      "if err != nil {",
+      "\treturn err",
+      "}"
+    ],
+    "description": "if err != nil { return err }"
+  },
+}
