@@ -26,5 +26,8 @@
    tree
    btop
    cloc
+   go
+   gopls
+   gotools
   ];
 }

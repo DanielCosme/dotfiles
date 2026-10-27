@@ -18,7 +18,14 @@
   };
 
   # CLI tools (replaces brew install)
-  environment.systemPackages = with pkgs; [];
+  environment.systemPackages = with pkgs; [
+    postgresql
+    nodejs
+    protobuf
+    colima
+    docker
+    docker-compose
+  ];
 
   # GUI apps (declarative Homebrew)
   homebrew = {
