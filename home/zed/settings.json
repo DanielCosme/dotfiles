@@ -19,7 +19,7 @@
 	},
 	"icon_theme": {
 		"mode": "light",
-		"light": "Catppuccin Latte",
+		"light": "Colored Zed Icons Theme Dark",
 		"dark": "Colored Zed Icons Theme Dark",
 	},
 	"git": {
@@ -152,7 +152,7 @@
 	"theme": {
 		"mode": "dark",
 		"light": "Solarized Light",
-		"dark": "Nightfox - blurred",
+		"dark": "Nordfox - blurred",
 	},
 	"session": {
 		"trust_all_worktrees": true,

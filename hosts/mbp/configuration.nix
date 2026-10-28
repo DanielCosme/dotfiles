@@ -26,6 +26,8 @@
     uid = 501;
   };
 
+  services.tailscale.enable = true;
+
   # CLI tools (replaces brew install)
   environment.systemPackages = with pkgs; [
     postgresql
@@ -35,6 +37,7 @@
     docker
     docker-compose
     claude-code
+    tailscale
   ];
 
   fonts.packages = with pkgs; [
