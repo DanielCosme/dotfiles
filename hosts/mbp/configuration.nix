@@ -32,6 +32,7 @@
     nodejs
     protobuf
     colima
+    docker
     docker-compose
     claude-code
   ];
