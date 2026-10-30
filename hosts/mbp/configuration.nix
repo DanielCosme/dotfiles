@@ -51,6 +51,8 @@
     casks = [ "ghostty" "bitwarden" "brave-browser" "zed" "amethyst"];
   };
 
+# Or the more complete reduce-motion style settings:
+
   # macOS preferences
   # https://nix-darwin.github.io/nix-darwin/manual/
   system.defaults = {
@@ -58,8 +60,14 @@
     dock.orientation = "left";
     dock.mru-spaces = false;
     finder.AppleShowAllFiles = false;
-    NSGlobalDomain.KeyRepeat = 1;
-    NSGlobalDomain.InitialKeyRepeat = 20;
+
+    NSGlobalDomain = {
+      NSAutomaticWindowAnimationsEnabled = false;
+      NSScrollAnimationEnabled = false;
+      NSWindowResizeTime = 0.001;
+      KeyRepeat = 1;
+      InitialKeyRepeat = 20;
+    };
 
     CustomUserPreferences."com.apple.AppleMultitouchMouse" = {
      MouseMomentumScroll = false;

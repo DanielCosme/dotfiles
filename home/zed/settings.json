@@ -9,6 +9,10 @@
 			"format_on_save": "on",
 			"tab_size": 2,
 		},
+		"Go": {
+			"format_on_save": "on",
+			"tab_size": 2,
+		},
 	},
 	"cli_default_open_behavior": "new_window",
 	"outline_panel": {
@@ -80,7 +84,6 @@
 		"diagnostic_badges": false,
 		"bold_folder_labels": true,
 		"git_status": true,
-		"folder_icons": true,
 		"file_icons": true,
 		"entry_spacing": "comfortable",
 		"default_width": 300.0,
@@ -151,8 +154,8 @@
 	"buffer_font_family": "Iosevka Nerd Font Mono",
 	"theme": {
 		"mode": "dark",
-		"light": "Solarized Light",
-		"dark": "Nordfox - blurred",
+		"light": "One Light",
+		"dark": "Nordfox - opaque",
 	},
 	"session": {
 		"trust_all_worktrees": true,
