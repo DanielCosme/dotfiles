@@ -131,6 +131,10 @@
   xdg.configFile."rex/init.lua".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/code/dotfiles/home/rex/init.lua";
 
+  # Karabiner only picks up changes when the whole directory is linked, not the file
+  xdg.configFile."karabiner".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/code/dotfiles/home/karabiner";
+
   home.stateVersion = "24.11";
 
   programs.neovim = {

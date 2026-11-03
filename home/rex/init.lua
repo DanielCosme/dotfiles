@@ -12,7 +12,6 @@ rex.bind("cmd+shift+d", "pane.split.down")
 
 rex.bind("cmd+j", "pane.focus.down")
 rex.bind("cmd+k", "pane.focus.up")
-rex.bind("cmd+l", "client.tab.next")
 
 rex.bind("cmd+z", "pane.zoom")
 

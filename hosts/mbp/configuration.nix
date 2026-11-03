@@ -48,7 +48,7 @@
   homebrew = {
     enable = true;
     onActivation.cleanup = "zap";
-    casks = [ "ghostty" "bitwarden" "brave-browser" "zed" "amethyst"];
+    casks = [ "ghostty" "bitwarden" "brave-browser" "zed" "amethyst" "karabiner-elements"];
   };
 
 # Or the more complete reduce-motion style settings:
