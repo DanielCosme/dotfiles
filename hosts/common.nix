@@ -1,10 +1,6 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
-  # Allow only the unfree packages listed here
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [ "claude-code" ];
-
   system.primaryUser = "daniel";
 
   programs.fish.enable = true;
@@ -36,7 +32,6 @@
     colima
     docker
     docker-compose
-    claude-code
     tailscale
   ];
 
@@ -48,7 +43,7 @@
   homebrew = {
     enable = true;
     onActivation.cleanup = "zap";
-    casks = [ "ghostty" "bitwarden" "brave-browser" "zed" "amethyst" "karabiner-elements" "grok-bot"];
+    casks = [ "ghostty" "bitwarden" "brave-browser" "zed" "karabiner-elements" ];
   };
 
 # Or the more complete reduce-motion style settings:

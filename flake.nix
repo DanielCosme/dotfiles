@@ -14,11 +14,12 @@
   };
 
   outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager }:
-    {
-      darwinConfigurations."mbp" = nix-darwin.lib.darwinSystem {
+    let
+      mkHost = hostModule: nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = [
-          ./hosts/mbp/configuration.nix
+          ./hosts/common.nix
+          hostModule
           home-manager.darwinModules.home-manager
           {
             users.users.daniel = {
@@ -32,5 +33,9 @@
           }
         ];
       };
+    in
+    {
+      darwinConfigurations.personal = mkHost ./hosts/personal.nix;
+      darwinConfigurations.work = mkHost ./hosts/work.nix;
     };
 }
