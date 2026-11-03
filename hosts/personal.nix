@@ -7,5 +7,6 @@
   environment.systemPackages = [ pkgs.grok-build ];
 
   # This machine only. The syncthing cask is the menu-bar app and runs the daemon.
-  homebrew.casks = [ "logseq" "syncthing" "grok-bot" ];
+  # logseq-og is the file-based Markdown app. The logseq cask is the database app.
+  homebrew.casks = [ "logseq-og" "syncthing-app" "grok-bot" ];
 }
